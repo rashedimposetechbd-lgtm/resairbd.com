@@ -1,0 +1,69 @@
+.yith-woocompare-widget-content ul.products-list li:not( .list_empty ) {
+    position: relative;
+    padding: 5px 0;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.yith-woocompare-widget-content ul.products-list {
+    list-style: none;
+    margin: 0 0 15px;
+}
+
+.yith-woocompare-widget-content ul.products-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.yith-woocompare-widget-content ul.products-list li .remove {
+    color: #000;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+}
+.yith-woocompare-widget-content ul.products-list li img {
+    max-width: 50px;
+    height: auto;
+    display: block;
+    vertical-align: middle;
+    float: left;
+}
+.yith-woocompare-widget-content ul.products-list li .product-info {
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 400;
+    outline: none;
+    text-decoration: none;
+}
+.yith-woocompare-widget-content ul.products-list li .product-info:before,
+.yith-woocompare-widget-content ul.products-list li .product-info:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.yith-woocompare-widget-content a.compare-widget,
+.yith-woocompare-widget-content a.compare {
+    float: right;
+    line-height: 1;
+    cursor: pointer;
+    padding: 8px 10px;
+    font-size: 13px;
+    border: 0;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.yith-woocompare-widget-content a.compare-widget:hover,
+.yith-woocompare-widget-content a.compare:hover {
+    color: #ffffff;
+    background-color: #303030;
+}
+
+.yith-woocompare-widget-content a.clear-all {
+    outline: none;
+    font-size: 12px;
+    cursor: pointer;
+}

@@ -1,0 +1,734 @@
+/*########### FIXED COLUMNS ###########*/
+
+div.DTFC_Blocker{
+    background-color:white;
+}
+div.DTFC_LeftWrapper table.dataTable,
+div.DTFC_RightWrapper table.dataTable{
+    margin-bottom:0;
+    z-index:2;
+}
+div.DTFC_LeftWrapper table.dataTable.no-footer,
+div.DTFC_RightWrapper table.dataTable.no-footer{
+    border-bottom:none;
+}
+div.DTFC_LeftFootWrapper table.compare-list,
+div.DTFC_LeftHeadWrapper table.compare-list {
+    border: 0;
+}
+
+/*########### BUTTON ###########*/
+
+a.compare.disabled:not(.added) {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/*########### COMPARE ###########*/
+
+.yith-woocompare-popup-container {
+    position:fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255,255,255,.95);
+    z-index: 1000;
+}
+
+a.yith-woocompare-popup-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 40px;
+    width: 40px;
+    color: #434343;
+    text-decoration: none;
+    z-index: 2;
+    line-height: 1;
+    background-color: rgba(255,255,255,.7);
+    text-align: center;
+}
+
+body.yith-woocompare-popup-open {
+    overflow-y: hidden;
+}
+
+body.yith-woocompare-popup,
+.yith-woocompare-table-wrapper {
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #747373;
+    background: none !important;
+    margin: 0;
+    max-height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+body.yith-woocompare-popup,
+.yith-woocompare-table-scroll-wrapper {
+    position: relative;
+    padding: 5%;
+}
+
+body.yith-woocompare-popup #yith-woocompare {
+    padding: 10px;
+}
+
+#yith-woocompare-table_wrapper {
+    margin: 10px 0;
+}
+
+#yith-woocompare table.dataTable.compare-list thead th,
+#yith-woocompare table.dataTable.compare-list thead td,
+#yith-woocompare table.dataTable.compare-list tfoot td,
+#yith-woocompare table.dataTable.compare-list tfoot th {
+    border: 0;
+    vertical-align: middle;
+}
+#yith-woocompare table.compare-list {
+    width: 100%;
+    border-bottom: 0;
+    border-top: 0;
+    margin: 0;
+    table-layout: auto;
+}
+#yith-woocompare table.compare-list tr {
+    background: #fff;
+}
+#yith-woocompare table.compare-list tbody tr .filler {
+    padding: 0!important;
+}
+#yith-woocompare table.compare-list td:not(.filler) {
+    min-width: 300px;
+    width: 300px;
+    text-align: center;
+    vertical-align: middle;
+}
+#yith-woocompare table.compare-list tbody th:not(.filler) {
+    min-width: 300px;
+    width: 300px;
+    overflow: hidden;
+    text-align: left;
+    font-weight: 700;
+}
+#yith-woocompare table.dataTable.compare-list tbody th,
+#yith-woocompare table.dataTable.compare-list tbody td {
+    border-right: none;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: none;
+    border-left: none;
+    padding-block: 10px;
+    vertical-align: middle;
+}
+#yith-woocompare table.dataTable.compare-list:not(.compact) tbody td {
+    padding-inline: 40px;
+}
+#yith-woocompare table.dataTable.compare-list tbody tr:first-child th,
+#yith-woocompare table.dataTable.compare-list tbody tr:first-child td {
+    border-top: none;
+}
+#yith-woocompare table.compare-list tbody td.last-column {
+    width: auto;
+    border-right: 0;
+}
+#yith-woocompare table.dataTable.compare-list tbody .product_info th,
+#yith-woocompare table.dataTable.compare-list tbody .product_info td {
+    vertical-align: top;
+}
+#yith-woocompare table.dataTable.compare-list tbody tr.label-row td {
+    font-weight: 700;
+    color: #434343;
+    padding-bottom: 0;
+}
+#yith-woocompare table.dataTable.compare-list tbody tr.label-row + tr td {
+    border-top: none;
+}
+
+#yith-woocompare .dataTables_scrollBody::-webkit-scrollbar {
+    -webkit-appearance: none;
+    height: 4px;
+}
+#yith-woocompare .dataTables_scrollBody::-webkit-scrollbar-thumb {
+    background-color: #e7e7e7;
+    border-radius: 10px;
+}
+
+.rtl #yith-woocompare table.compare-list tbody th {
+    text-align: right;
+}
+
+/*########### TABLE IMAGE ###########*/
+
+.yith_woocompare_table_image {
+    text-align: center;
+    margin-top: 20px;
+}
+.yith_woocompare_table_image img {
+    display: inline-block;
+    max-width: 100%;
+}
+
+/*############ PRODUCT INFO ###########*/
+
+table.compare-list img {
+    width: 100%;
+    height: auto;
+}
+table.compare-list tr.product_info td {
+    vertical-align: top;
+}
+table.compare-list .remove {
+    margin-bottom: 10px;
+}
+table.compare-list .remove a {
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+}
+table.compare-list .remove a span{
+    padding: 0 5px;
+}
+table.compare-list .image-wrap {
+    display: block;
+    position: relative;
+    line-height: 0;
+}
+table.compare-list .image-wrap .image-overlay {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.4);
+    line-height: normal;
+}
+table.compare-list .image-wrap:hover .image-overlay {
+    display: block;
+}
+table.compare-list .image-wrap:hover .image-overlay .remove a {
+    display: block;
+    background: #fff;
+    font-size: 0;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    margin: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+}
+table.compare-list .image-wrap:hover .image-overlay .remove a > span {
+    display: none;
+}
+table.compare-list .image-wrap:hover .image-overlay .remove a:after {
+    content: "\00D7";
+    font-size: 20px;
+}
+table.compare-list .product-anchor {
+    display: block;
+}
+table.compare-list .product_title {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 15px;
+    color: #000;
+    text-decoration: none;
+    font-weight: 400;
+}
+table.compare-list .product_info td > * {
+    margin-bottom: 25px;
+}
+table.compare-list .product_info td a {
+    text-decoration: none;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+#yith-woocompare  .added_to_cart,
+#yith-woocompare .button {
+    margin: 0;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    white-space: nowrap;
+    display: inline-block;
+}
+#yith-woocompare .empty-comparison {
+    text-align: center;
+    margin: 200px auto;
+}
+
+a.button.yith_woocompare_clear {
+    color: #b80001;
+    padding: 6px 10px;
+}
+
+div.compare-table-clear {
+    text-align: right;
+    margin: 10px 0;
+}
+
+table.compare-list  .product_info .button.loading,
+table.compare-list  .add-to-cart .button.loading {
+    padding-right: 30px;
+}
+
+/*############# AVAILABILITY ##############*/
+
+table.compare-list.with-stock-icons tr.stock:not(.label-row) td {
+    font-size: 0;
+}
+table.compare-list  tr.stock:not(.label-row) td.in-stock {
+    background-color: #f2fcde;
+    color: #01a71c;
+}
+table.compare-list  tr.stock td.out-of-stock {
+    background-color: #fff0e8;
+    color: #ff4200;
+}
+table.compare-list.with-stock-icons tr.stock td.in-stock span.availability-label:before {
+    content: '';
+    background: url('../images/green-check.svg') no-repeat center center;
+    font-size: 20px;
+    display: block;
+    height: 30px;
+}
+table.compare-list.with-stock-icons tr.stock td.out-of-stock span.availability-label:before {
+    content: "\00D7";
+    font-size: 50px;
+    line-height: 0;
+    vertical-align: middle;
+}
+
+/*############## RATING ###############*/
+
+table.compare-list  tr.rating .star-rating {
+    float: none;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/*############## PRICE ################*/
+
+table.compare-list tr.price {
+    color: #3e3e3e;
+    display: table-row; /* YITH Proteo fix */
+}
+table.compare-list  tr.price del {
+    opacity: 0.8;
+}
+
+/*############### SHARE ################*/
+
+#yith-woocompare-share {
+    margin-top: 20px
+}
+#yith-woocompare-share h3 {
+    margin-top: 0;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+#yith-woocompare-share ul {
+    padding: 0 0 50px;
+    list-style: none;
+    margin: 0;
+    display: flex;
+    gap: 25px;
+}
+#yith-woocompare-share a {
+    display: block;
+    box-shadow: none;
+    outline: none;
+    color: #434343
+}
+
+#yith-woocompare-share a svg {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+/*############ COMPARE RELATED #############*/
+
+#yith-woocompare-related {
+    margin: 20px 0;
+}
+#yith-woocompare-related h3.yith-woocompare-related-title {
+    font-size: 17px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+#yith-woocompare-related .yith-woocompare-related-wrapper {
+    position: relative;
+    background: #fff;
+}
+#yith-woocompare-related .related-products {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    overflow-x: hidden;
+}
+#yith-woocompare-related .related-products .owl-item {
+    display: inline-block;
+}
+#yith-woocompare-related .related-products .related-product {
+    text-align: center;
+}
+#yith-woocompare-related .related-products .related-product a {
+    text-decoration: none;
+}
+#yith-woocompare-related .related-products .related-product h3 {
+    font-size: 15px;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+#yith-woocompare-related .related-products .related-product .product-price {
+    font-size: 13px;
+    color: #333;
+    margin-bottom: 10px;
+}
+#yith-woocompare-related .related-products .related-product > div {
+    margin-bottom: 10px;
+}
+#yith-woocompare-related .related-products .related-product div.product-image {
+    position: relative;
+    margin-bottom: 10px;
+}
+#yith-woocompare-related .related-products .related-product div.product-image img {
+    height: auto;
+    max-width: 100%;
+}
+#yith-woocompare-related .related-products .related-product div.product-image img.onsale.yit-image {
+    margin: 0;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 5;
+    width: auto;
+}
+#yith-woocompare-related .related-slider-nav div {
+    position: absolute;
+    top: -45px;
+    width: 30px;
+    height: 35px;
+    cursor: pointer;
+    border: 1px solid #e7e7e7;
+    text-align: center;
+    background: #ffffff url( '../images/nav-arrow.html' ) no-repeat;
+    cursor: pointer;
+}
+#yith-woocompare-related .related-slider-nav div.related-slider-nav-prev {
+    right: 35px;
+    background-position: -3px -31px;
+}
+#yith-woocompare-related .related-slider-nav div.related-slider-nav-next {
+    right: 0;
+    background-position: 0 1px;
+}
+
+/*############### COMPARE NAV ##############*/
+
+#yith-woocompare-cat-nav {
+    margin-top: 20px;
+    text-align: center;
+}
+#yith-woocompare-cat-nav h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+}
+#yith-woocompare-cat-nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+#yith-woocompare-cat-nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+    font-weight: 700;
+}
+#yith-woocompare-cat-nav ul li a {
+    text-decoration: none;
+    color: #7b7b7b;
+}
+#yith-woocompare-cat-nav ul li .active {
+    border-bottom: 2px solid;
+}
+#yith-woocompare-cat-nav ul li:last-child {
+    margin-right: 0;
+}
+
+/*############### PREVIEW BAR ##############*/
+
+#yith-woocompare-preview-bar {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    display: none;
+    background: rgba(0, 0, 0, .8);
+    box-sizing: border-box;
+    padding: 20px;
+    color: #fff;
+    z-index: 99;
+}
+#yith-woocompare-preview-bar.shown {
+    display: block;
+}
+#yith-woocompare-preview-bar .container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 0;
+}
+#yith-woocompare-preview-bar .compare-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+#yith-woocompare-preview-bar .compare-list li{
+    align-self: stretch;
+    width: 80px;
+}
+#yith-woocompare-preview-bar .compare-list li.product-placeholder {
+    border: 1px dashed #fff;
+    display: flex;
+    align-items: center;
+    padding-inline: 15px;
+}
+#yith-woocompare-preview-bar .compare-list .image-wrap {
+    position: relative;
+}
+#yith-woocompare-preview-bar .compare-list .image-wrap > a {
+    font-size: 0;
+    display: block;
+}
+#yith-woocompare-preview-bar .compare-list .image-wrap img {
+    max-width: 100%;
+}
+#yith-woocompare-preview-bar .compare-list .image-wrap .remove a {
+    display: block;
+    color: #000;
+    background: #fff;
+    font-size: 0;
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    margin: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-decoration: none;
+    text-align: center;
+}
+#yith-woocompare-preview-bar .compare-list .image-wrap .remove a:hover {
+    background: #eee;
+}
+#yith-woocompare-preview-bar .compare-list .image-wrap .remove a:after {
+    content: "\00D7";
+    font-size: 25px;
+}
+
+/*########## YITH BADGE ############*/
+
+table.compare-list  .container-image-and-badge {
+    position: relative;
+    display: inline-block;
+}
+
+/*########### WOOCOMMERCE PRODUCT BUNDLE ############*/
+
+table.compare-list .bundled_product_list {
+    margin: 25px 0;
+}
+table.compare-list div.bundled_product {
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+table.compare-list .bundled_product:after,
+table.compare-list .bundled_product:before {
+    display: table;
+    content: '';
+    clear: both;
+}
+table.compare-list .bundled_product .bundled_product_images {
+    display: inline-block;
+    float: left;
+}
+table.compare-list .bundled_product .bundled_product_images img {
+    max-width: 80px;
+}
+table.compare-list .bundled_product .details {
+    display: block;
+    overflow: hidden;
+    padding-left: 10px;
+    text-align: left;
+    padding-top: 10px;
+}
+table.compare-list .bundled_product .details .bundled_product_title,
+table.compare-list .bundled_product .details .price {
+    font-size: 90%;
+}
+table.compare-list .bundled_product .details .price {
+    margin-bottom: 0;
+}
+
+/*########### REUQEST A QUOTE ############*/
+
+table.compare-list .yith-ywraq-add-to-quote {
+    margin-top: 10px;
+}
+
+/*############# COMPARE COUNTER ##############*/
+
+.yith-woocompare-counter a {
+    box-shadow: none !important;
+}
+.yith-woocompare-counter span > span {
+    display: inline-block;
+    vertical-align: middle;
+}
+.yith-woocompare-counter span.yith-woocompare-icon {
+    margin-right: 5px;
+}
+.yith-woocompare-counter span.yith-woocompare-icon img {
+    max-width: 50px;
+    height: auto;
+}
+.yith-woocompare-counter span.yith-woocompare-count {
+    color: #555;
+    font-weight: 400;
+    font-size: 13px;
+}
+.yith-woocompare-counter a:hover span.yith-woocompare-count {
+    color: #000;
+}
+
+.yith-woocompare-error {
+    padding: 10px;
+    border: 1px solid #ffc5c2;
+    border-radius: 5px;
+    background-color: #ffe6e5;
+    position: relative;
+}
+.yith-woocompare-error p {
+    margin: 0;
+    color: #ff645c;
+    padding-left: 25px;
+    font-size: 13px;
+}
+.yith-woocompare-error::before {
+    font-family: WooCommerce;
+    content: '\e016';
+    color: #b81c23;
+    display: inline-block;
+    position: absolute;
+}
+
+/*########## WC Blocks ############*/
+
+.yith-wccp-compare {
+    text-align: center;
+}
+
+/*############## RESPONSIVE ###############*/
+
+@media( max-width: 1200px ) {
+    #yith-woocompare-preview-bar header{
+        display: none;
+    }
+}
+
+@media( max-width: 991px ) {
+    #yith-woocompare-preview-bar .container {
+        max-width: 100%;
+    }
+
+    #yith-woocompare table.dataTable.compare-list tbody tr:not(.product_info) td {
+        text-align: left;
+    }
+
+    #yith-woocompare table.dataTable.compare-list tbody tr.stock td {
+        background: transparent;
+    }
+    #yith-woocompare table.dataTable.compare-list tbody tr.stock td .availability-label {
+        display: inline-block;
+        width: 30px;
+    }
+}
+
+@media( max-width: 768px ) {
+    div.DTFC_LeftBodyWrapper {
+        pointer-events: none;
+    }
+
+    #yith-woocompare-preview-bar .container {
+        gap: 15px;
+    }
+    #yith-woocompare-preview-bar .compare-list {
+        gap: 15px;
+    }
+    #yith-woocompare-preview-bar .compare-list li,
+    #yith-woocompare-preview-bar .compare-list li.product-placeholder {
+        width: 50px;
+    }
+    #yith-woocompare-preview-bar .compare-list li.product-placeholder {
+        padding-inline: 0;
+        text-align: center;
+    }
+
+    #yith-woocompare-preview-bar .compare-list li .image-wrap > a {
+        height: auto;
+    }
+
+    #yith-woocompare table.compare-list thead th,
+    #yith-woocompare table.compare-list tfoot th,
+    #yith-woocompare table.compare-list tr .filler {
+        display: none;
+    }
+}
+
+@media( max-width: 480px ) {
+    #yith-woocompare table.dataTable.compare-list tbody th {
+        padding: 10px 5px;
+    }
+    #yith-woocompare table.compare-list tbody th {
+        width: 60px;
+        max-width: 60px;
+        min-width: 60px;
+        font-size: 10px;
+    }
+    #yith-woocompare table.compare-list td {
+        width: 160px;
+        max-width: 160px;
+        min-width: 160px;
+    }
+
+    #yith-woocompare-preview-bar .compare-list li,
+    #yith-woocompare-preview-bar .compare-list li.product-placeholder {
+        display: none;
+    }
+    #yith-woocompare-preview-bar .compare-list li:first-of-type,
+    #yith-woocompare-preview-bar .compare-list li:nth-of-type(2),
+    #yith-woocompare-preview-bar .compare-list li:nth-of-type(3) {
+        display: block;
+    }
+    #yith-woocompare-preview-bar .compare-list li.product-placeholder span{
+        display: none;
+    }
+}
